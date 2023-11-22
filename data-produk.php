@@ -31,7 +31,6 @@
 				<p><a href="tambah-produk.php">Add Data</a></p>
 				<table border="1" cellspacing="0" class="table">
 					<thead>
-						
 						<tr>
 							<th width="60px">No</th>
 							<th>Kategori</th>
@@ -42,6 +41,7 @@
 							<th width="150px">Keterangan</th>
 						</tr>
 					</thead>
+					
 					<tbody>
 						<?php 
 							$no = 1;
@@ -50,7 +50,7 @@
 
 
 							while ($row = mysqli_fetch_array($produk)) {
-							?>
+						?>
 						<tr>
 							<td><?php echo $no++ ?></td>
 							<td><?php echo $row['category_name'] ?></td>
