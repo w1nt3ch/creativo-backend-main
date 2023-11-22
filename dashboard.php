@@ -34,7 +34,7 @@
 		<div class="container">
 			<h3>Home</h3>
 			<div class="box">
-				<h4>WELKOME BACK<?php echo $_SESSION['a_global']->admin_name ?> di Creativo Digital Service</h4>
+				<h4>WELCOME BACK <?php echo $_SESSION['username'] ?> to Creativo Digital Services</h4>
 
 			</div>
 		</div>
