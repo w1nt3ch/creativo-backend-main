@@ -1,10 +1,10 @@
 <?php
-	include "controls/cookie.php";
-	include "db.php";
+	include "../controls/cookie.php";
+	include "../db.php";
 
 	$query = mysqli_query($conn, "SELECT * FROM tb_admin WHERE admin_id = '".$_SESSION['id']."' ");
 	$d = mysqli_fetch_object($query);
- ?>
+?>
 
 <!DOCTYPE html>
 <html>
@@ -12,7 +12,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Creativo</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -45,34 +45,7 @@
 					<input type="text" name="alamat" placeholder="Alamat" class="input-control" value="<?php echo $d->admin_address ?>" required>
 					<input type="submit" name="submit" value="Update Data" class="btn">
 				</form>
-				<?php
-					if(isset($_POST['submit'])){
-
-						$nama 	= ucwords($_POST['nama']);
-						$user 	= $_POST['user'];
-						$hp 	= $_POST['hp'];
-						$email	= $_POST['email'];
-						$alamat = ucwords($_POST['alamat']);
-
-						$update = mysqli_query($conn, "UPDATE tb_admin SET 
-										admin_name = '".$nama."',
-										username = '".$user."',
-										admin_telp = '".$hp."',
-										admin_email 	= '".$email."',
-										admin_address 	= '".$alamat."'
-										WHERE admin_id 	= '".$d->admin_id."' ");
-						if($update){
-							echo '<script>alert("Alert! Update data succses")</script>';
-							echo '<script>window.location="profil.php"</script>';
-						}else{
-							echo 'gagal' .mysql_error($conn);
-						}
-
-					}
-
-
-
-				 ?>
+				<?php include "profil_update_data.php" ?>
 			</div>
 
 			<h3>Ubah Password</h3>
@@ -106,14 +79,7 @@
 							}
 
 						}
-						
-
-						
-
 					}
-
-
-
 				 ?>
 			</div>
 		</div>

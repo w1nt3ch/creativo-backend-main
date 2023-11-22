@@ -16,7 +16,7 @@
 			<h1><a href="dashboard.php">Creativo</a></h1>
 				<ul>
 					<li><a href="dashboard.php">Home</a></li>
-					<li><a href="profil.php">Identitas</a></li>
+					<li><a href="profile/profil.php">Identitas</a></li>
 					<li><a href="data-kategori.php">Kategori</a></li>
 					<li><a href="data-produk.php">Data Produk</a></li>
 					<li><a href="keluar.php">Logout</a></li>
@@ -30,7 +30,6 @@
 			<h3>Home</h3>
 			<div class="box">
 				<h4>WELCOME BACK <?php echo $_SESSION['username'] ?> to Creativo Digital Services</h4>
-
 			</div>
 		</div>
 	</div>

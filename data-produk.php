@@ -17,12 +17,9 @@
 	<header>
 		<div class="container">
 			<h1><a href="dashboard.php">Creativo</a></h1>
-				<ul>
-			
-					<li><a href="dashboard.php">Home</a></li>
-					
-
-				</ul>
+			<ul>
+				<li><a href="dashboard.php">Home</a></li>
+			</ul>
 		</div>
 	</header>
 
