@@ -1,14 +1,10 @@
 <?php
-	session_start();
-	include 'db.php';
-	if($_SESSION['status_login'] != true) {
-		echo '<script>window.location="login.php"</script>';
-	}
+	include "controls/cookie.php";
+	include "db.php";
 
 	$produk = mysqli_query($conn, "SELECT * FROM tb_product WHERE product_id = '".$_GET['id']."' ");
 	if(mysqli_num_rows($produk) == 0){
-		echo '<script>window.location="data-produk.php"</script>';
-
+		header("Location: data-produk.php");
 	}
 	$p = mysqli_fetch_object($produk);
 	

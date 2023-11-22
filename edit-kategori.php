@@ -1,16 +1,13 @@
 <?php
-	session_start();
-	include 'db.php';
-	if($_SESSION['status_login'] != true) {
-		echo '<script>window.location="login.php"</script>';
-	}
+	include "controls/cookie.php";
+	include "db.php";
 
 	$kategori = mysqli_query($conn, "SELECT * FROM tb_category WHERE category_id = '".$_GET['id']."' ");
 	if(mysqli_num_rows($kategori) == 0) {
-		echo '<script>window.location="data-kategori.php"</script';
+		header("Location: data-produk.php");
 	}
 	$k = mysqli_fetch_object($kategori);
- ?>
+?>
 
 <!DOCTYPE html>
 <html>

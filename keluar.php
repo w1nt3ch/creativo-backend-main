@@ -1,6 +1,4 @@
-<?php 
-	//logout
-	session_start();
+<?php 	
 	session_destroy();
-	echo '<script>window.location="login.php"</script>';
+	header("Location: controls/auth.php");
 ?>
