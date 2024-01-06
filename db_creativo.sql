@@ -42,7 +42,7 @@ CREATE TABLE `tb_admin` (
 --
 
 INSERT INTO `tb_admin` (`admin_id`, `admin_name`, `username`, `password`, `admin_telp`, `admin_email`, `admin_address`) VALUES
-(1, 'Tester', 'admin', '01c92d3c5e470cbc71b8a461b0ecff53', '082291111004', 'creativo.backend@binus.ac.id', 'Jl. Raya Kb. Jeruk No.27, RW.9, Kb. Jeruk, Kec. Kb. Jeruk, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11530');
+(1, 'Tester', 'admin', '5f48a5df5e2ecb1282c9d43c449f8c6bbed8a9e8d8d6b923036499be4fc6f17d', '082291111004', 'creativo.backend@binus.ac.id', 'Jl. Raya Kb. Jeruk No.27, RW.9, Kb. Jeruk, Kec. Kb. Jeruk, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11530');
 
 -- --------------------------------------------------------
 
